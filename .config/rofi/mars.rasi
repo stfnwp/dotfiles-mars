@@ -1,0 +1,66 @@
+configuration {
+  show-icons: true;
+  icon-theme: "Papirus";
+  font: "FiraCode Nerd Font 11";
+  drun-display-format: "{icon} {name}";
+  display-combi: " ";
+  /* display-drun: " "; */
+  display-drun: "";
+  display-window: " ";
+}
+
+* {
+  background-color: #292D3E;
+  bg-alt: #F07178;
+  fg: #ECEFF4;
+
+  mars-blue-light: #88C0D0;
+  mars-yellow: #EBCB8B;
+
+  border: 0;
+  lines: 12;
+  padding: 0;
+  margin: 0;
+  spacing: 0;
+}
+
+window {
+  width: 30%;
+  transparency: "real";
+}
+
+mainbox {
+  children: [inputbar, listview];
+}
+
+listview {
+  columns: 1;
+}
+
+element {
+  padding: 12;
+  orientation: vertical;
+  text-color: @fg;
+}
+
+element selected {
+  background-color: @bg-alt;
+  text-color: #292D3E;
+}
+
+inputbar {
+  background-color: @background;
+  children: [prompt, entry];
+}
+
+prompt {
+  enabled: true;
+  font: "SauceCodePro Nerd Font 12";
+  padding: 12 0 0 12;
+  text-color: @bg-alt;
+}
+
+entry {
+  padding: 12;
+  text-color: @bg-alt;
+}
